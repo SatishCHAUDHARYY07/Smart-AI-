@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🌱 AgroAI</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">About</a>
+    <button class="contact-btn">Get Started</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="left">
+    <h1>Smart Farming with AI 🌾</h1>
+
+    <p>
+      Upload crop image and get instant disease detection,
+      fertilizer suggestions, and prevention tips in your local language.
+    </p>
+
+    <div class="actions">
+      <input type="file" id="imageInput" accept="image/*">
+
+      <select id="lang">
+        <option>Hindi</option>
+        <option>English</option>
+        <option>Marathi</option>
+      </select>
+
+      <button onclick="analyze()">Analyze</button>
+    </div>
+
+    <div class="features">
+      ✔ Fast Detection <br>
+      ✔ Works in Local Language <br>
+      ✔ Free for Farmers
+    </div>
+  </div>
+
+  <div class="right">
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909762.png">
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <h2>[ HOW IT WORKS ]</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h3>01</h3>
+      <p><b>Upload Image</b><br>Farmer uploads crop image</p>
+    </div>
+
+    <div class="step">
+      <h3>02</h3>
+      <p><b>AI Detection</b><br>Disease & Pest detected</p>
+    </div>
+
+    <div class="step">
+      <h3>03</h3>
+      <p><b>Smart Advice</b><br>Fertilizer suggestions</p>
+    </div>
+
+    <div class="step">
+      <h3>04</h3>
+      <p><b>Local Language</b><br>Regional support</p>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE -->
+<section class="samples">
+  <h2>📊 Sample Results</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="./images/leaf.jpeg">
+      <h3>Healthy Leaf</h3>
+      <p>No disease detected 🌱</p>
+    </div>
+
+    <div class="card">
+      <img src="./images/insect.jpeg">
+      <h3>Insect Infection</h3>
+      <p>Pest attack detected 🐛</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section class="result-section">
+  <h2>🌿 Your Result</h2>
+
+  <img id="preview" style="display:none;">
+
+  <div id="resultBox">
+    <p id="resultText">Upload image and click analyze</p>
+  </div>
+
+  <button onclick="speakResult()">🔊 Listen</button>
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbotBtn">💬</div>
+
+<div id="chatbox">
+  <div class="chat-header">AgroAI Bot 🤖</div>
+
+  <div class="chat-body" id="chatBody"></div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Ask something...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
